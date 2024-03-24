@@ -11,6 +11,7 @@ int main()
     int num, num_max;
     bool primer_numero = true;
 
+    cout << "Ingrese un numero :" << endl;
     cin >> num;
 
     // Se inicia el contador en 1 porque ya se ingresó el primer número más arriba.
@@ -32,6 +33,7 @@ int main()
         }
 
         contador++; // Sumar 1 a la variable contador
+        cout << "Ingrese un numero :" << endl;
         cin >> num; // Volver a ingresar num, para que se ingrese las 5 veces correspondientes.
     }
 
