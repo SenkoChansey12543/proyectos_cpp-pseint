@@ -1,4 +1,9 @@
 # depslib dependency file v1.0
-1584205420 source:c:\users\jesica\desktop\c++\proyecto c++\main.cpp
+1711263368 source:c:\users\jesica\desktop\c++\proyecto c++\main.cpp
 	<iostream>
+	"dados.h"
+
+1711263414 c:\users\jesica\desktop\c++\proyecto c++\dados.h
+	<cstdlib>
+	<ctime>
 

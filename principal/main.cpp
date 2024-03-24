@@ -2,8 +2,12 @@
 
 using namespace std;
 
+#include "dados.h"
+
 int main()
 {
-    cout << "Hello world!" << endl;
+    Dado dado;
+    dado.generar_numero();
+    cout << dado.numero;
     return 0;
 }
