@@ -17,6 +17,10 @@ using namespace rlutil;
 
 #include "Utiles/Arrays.h"
 
+/// Un sistema de coordenadas para planos 2D hecho en c++.
+/// También hay otras cosas útiles.
+/// Ver archivos .h dentro de las demas carpetas del proyecto.
+
 int main()
 {
     IDManager id_man;
