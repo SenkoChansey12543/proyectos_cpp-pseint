@@ -29,6 +29,7 @@ int main()
 
     for (int i = 0; i < 20; i++)
     {
+        // Se añade una posicion al Vector2 de cada objeto 2D basandose en i.
         objetos.append(Objeto2D(id_man, Vector2(i * i * 0.4, i * i / i * 3)));
     }
 
