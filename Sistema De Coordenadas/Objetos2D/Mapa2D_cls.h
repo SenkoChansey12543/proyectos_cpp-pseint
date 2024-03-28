@@ -3,7 +3,9 @@
 #endif // MAPA2D_CLS_H_INCLUDED
 
 /// Un mapa 2D que puede contener objetos dentro.
-/// Puede dibujar sus limites y mantener a los objetos dentro de los bordes.
+/// Puede dibujar sus límites y mantener a los objetos dentro de los bordes.
+/// También puede dibujar todos los objetos que esten dentro.
+/// Si se intenta añadir un objeto cuya posición esté fuera de sus límites, el mapa lo rechaza.
 
 class Mapa2D : Objeto2D
 {
