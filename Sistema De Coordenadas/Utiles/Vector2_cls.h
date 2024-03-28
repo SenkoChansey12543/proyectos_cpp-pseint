@@ -4,10 +4,10 @@
 
 class Vector2
 {
-private:
+public:
     double x;
     double y;
-public:
+
     Vector2(double init_x = 0, double init_y = 0)
     {
         x = init_x;
@@ -18,14 +18,6 @@ public:
     {
         rlutil::locate(x, y);
     }
-
-    // Getters y setters
-    double get_x(){return x;}
-    double get_y(){return y;}
-
-    void set_x(double new_x){x = new_x;}
-    void set_y(double new_y){y = new_y;}
-    void set_all(double new_x, double new_y){x = new_x; y = new_y;}
 
     /// Sobrecargas
 

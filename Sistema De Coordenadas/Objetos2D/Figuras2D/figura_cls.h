@@ -2,7 +2,7 @@
 #define FIGURA_CLS_H_INCLUDED
 #endif // FIGURA_CLS_H_INCLUDED
 
-class Figura
+class Figura : Objeto2D
 {
 protected:
     int lados;

@@ -5,6 +5,9 @@ using namespace std;
 #include "Utiles/rlutil.h"
 using namespace rlutil;
 
+#include "Utiles/Arrays.h"
+
+
 #include "Utiles/Global_Funcs.h"
 
 #include "Utiles/Vector2_cls.h"
@@ -14,28 +17,33 @@ using namespace rlutil;
 #include "Objetos2D/Objeto2D.h"
 #include "Objetos2D/Figuras2D/figura_cls.h"
 #include "Objetos2D/Figuras2D/rectangulo_cls.h"
+#include "Objetos2D/Personaje2D_cls.h"
+#include "Objetos2D/Caja.h"
+#include "Objetos2D/Mapa2D_cls.h"
 
-#include "Utiles/Arrays.h"
-
-/// Un sistema de coordenadas para planos 2D hecho en c++.
-/// También hay otras cosas útiles.
-/// Ver archivos .h dentro de las demas carpetas del proyecto.
 
 int main()
 {
+    cout << boolalpha;
+    rlutil::hidecursor();
+
     IDManager id_man;
 
-    Array<Objeto2D> objetos;
+    Mapa2D mapa(Vector2(10,12), Vector2(75,50));
 
-    for (int i = 0; i < 20; i++)
+    Personaje2D jugador(id_man, 'O', Vector2(25,25));
+    mapa.add_object(jugador);
+
+    for (int i = 0; i < 10; i++)
     {
-        // Se añade una posicion al Vector2 de cada objeto 2D basandose en i.
-        objetos.append(Objeto2D(id_man, Vector2(i * i * 0.4, i * i / i * 3)));
+        mapa.add_object(Caja2D(id_man, Vector2(23+i+i, 15+i*i)));
     }
 
-    for (int i = 0; i < objetos.get_size(); i++)
+    while (true)
     {
-        cout << objetos[i].get_pos() << endl;
+        mapa.draw_objects();
+        jugador.moverse();
+        mapa.keep_objects_inside();
     }
 
     return 0;

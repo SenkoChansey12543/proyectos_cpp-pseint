@@ -5,33 +5,19 @@
 class IDManager
 {
 private:
-    int* IDs;
-    int tam;
+    Array<int> IDs;
 public:
-    IDManager(){tam = 0; IDs = nullptr;}
 
     int add_id()
     {
-        int id = tam;
-        tam += 1;
+        IDs.append(IDs.get_size());
 
-        int* copia = new int[tam];
-        for (int i = 0; i < tam-1; i++) copia[i] = IDs[i];
-
-        delete[] IDs;
-        IDs = new int[tam];
-
-        for (int i = 0; i < tam; i++) IDs[i] = copia[i];
-
-        IDs[tam-1] = id;
-        delete[] copia;
-
-        return id;
+        return IDs.get_size() - 1;
     }
 
     bool has_id(int id)
     {
-        for (int i = 0; i < tam; i++)
+        for (int i = 0; i < IDs.get_size(); i++)
         {
             if (IDs[i] == id) return true;
         }
@@ -41,11 +27,9 @@ public:
 
     void mostrar()
     {
-        for (int i = 0; i < tam; i++)
+        for (int i = 0; i < IDs.get_size(); i++)
         {
             cout << IDs[i] << endl;
         }
     }
-
-    ~IDManager(){delete[] IDs;}
 };

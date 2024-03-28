@@ -4,30 +4,29 @@
 
 #include <conio.h>
 
-void read_arrows()
+int read_arrows()
 {
     char key = getch();
 
-    while(true)
+    if (key == -32)
     {
-        if (key == -32)
+        char arrow = getch();
+        switch(arrow)
         {
-            char arrow = getch();
-            switch(arrow)
-            {
-                case 72: // Arriba
-                    cout << "Tecla de flecha arriba presionada" << std::endl;
-                    break;
-                case 75: // Izquierda
-                    cout << "Tecla de flecha izquierda presionada" << std::endl;
-                    break;
-                case 77: // Derecha
-                    cout << "Tecla de flecha derecha presionada" << std::endl;
-                    break;
-                case 80: // Abajo
-                    cout << "Tecla de flecha abajo presionada" << std::endl;
-                    break;
-            }
+            case 72: // Arriba = 0
+                return 0;
+                break;
+            case 75: // Izquierda = 1
+                return 1;
+                break;
+            case 77: // Derecha = 2
+                return 2;
+                break;
+            case 80: // Abajo = 3
+                return 3;
+                break;
         }
     }
+
+    return 4;
 }

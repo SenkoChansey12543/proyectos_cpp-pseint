@@ -32,8 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Objetos2D/Caja.h" />
 		<Unit filename="Objetos2D/Figuras2D/figura_cls.h" />
 		<Unit filename="Objetos2D/Figuras2D/rectangulo_cls.h" />
+		<Unit filename="Objetos2D/Mapa2D_cls.h" />
 		<Unit filename="Objetos2D/Objeto2D.h" />
 		<Unit filename="Utiles/Arrays.h" />
 		<Unit filename="Utiles/Global_Funcs.h" />
