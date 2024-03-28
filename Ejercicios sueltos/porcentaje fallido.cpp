@@ -10,7 +10,7 @@ int main ()
    if ( importe < 100)
    {
       // Aplicar aca 5 descuento
-      // Usar , y no . en los float
+      // Usar . y no , en los float
       // No usar % para calcular porcentaje, en este caso se usa *
       // Ejemplo de descuento: cout << "5 de descuento: " << importe * 0.95 << endl;
      cout << " 5 porciento de descuento " <<  pagar = importe% 0,95; << endl;
