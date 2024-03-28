@@ -4,7 +4,7 @@
 
 class Mapa2D : Objeto2D
 {
-public:
+private:
     Vector2 top_left_limit;
     Vector2 down_right_limit;
     Array<Objeto2D*> objetos_dentro;
