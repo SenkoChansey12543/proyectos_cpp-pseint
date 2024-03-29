@@ -32,15 +32,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Objetos2D/Caja.h" />
-		<Unit filename="Objetos2D/Figuras2D/figura_cls.h" />
-		<Unit filename="Objetos2D/Figuras2D/rectangulo_cls.h" />
+		<Unit filename="Objetos2D/Caja2D_cls.h" />
+		<Unit filename="Objetos2D/Enemigo2D_cls.h" />
+		<Unit filename="Objetos2D/Jugador2D_cls.h" />
 		<Unit filename="Objetos2D/Mapa2D_cls.h" />
-		<Unit filename="Objetos2D/Objeto2D.h" />
-		<Unit filename="Utiles/Arrays.h" />
+		<Unit filename="Objetos2D/Objeto2D_cls.h" />
+		<Unit filename="Objetos2D/Rectangulo_cls.h" />
+		<Unit filename="Objetos2D/Spawner2D_cls.h" />
+		<Unit filename="Utiles/Arrays_cls.h" />
 		<Unit filename="Utiles/Global_Funcs.h" />
 		<Unit filename="Utiles/IDManager_cls.h" />
-		<Unit filename="Utiles/Plano2D_cls.h" />
+		<Unit filename="Utiles/ID_stc.h" />
 		<Unit filename="Utiles/Vector2_cls.h" />
 		<Unit filename="Utiles/rlutil.h" />
 		<Unit filename="main.cpp" />

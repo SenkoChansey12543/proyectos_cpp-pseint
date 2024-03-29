@@ -1,49 +1,47 @@
 #include <iostream>
+#include <windows.h>
 #include <conio.h>
+#include <cmath>
+
 using namespace std;
 
 #include "Utiles/rlutil.h"
-using namespace rlutil;
 
-#include "Utiles/Arrays.h"
+#include "Utiles/Arrays_cls.h"
+#include "Utiles/ID_cls.h"
+#include "Utiles/IDManager_cls.h"
 
+IDManager id_man; // id_man está declarado como variable global ya que todos los objetos usan el mismo IDManager, no se usa ningún otro IDManager además de este.
 
 #include "Utiles/Global_Funcs.h"
 
 #include "Utiles/Vector2_cls.h"
 
-#include "Utiles/IDManager_cls.h"
-
-#include "Objetos2D/Objeto2D.h"
-#include "Objetos2D/Figuras2D/figura_cls.h"
-#include "Objetos2D/Figuras2D/rectangulo_cls.h"
-#include "Objetos2D/Personaje2D_cls.h"
-#include "Objetos2D/Caja.h"
+#include "Objetos2D/Objeto2D_cls.h"
+#include "Objetos2D/Rectangulo_cls.h"
+#include "Objetos2D/Jugador2D_cls.h"
+Jugador2D jugador('O', rlutil::YELLOW);
+#include "Objetos2D/Enemigo2D_cls.h"
+#include "Objetos2D/Spawner2D_cls.h"
 #include "Objetos2D/Mapa2D_cls.h"
 
 
 int main()
+
 {
     cout << boolalpha;
     rlutil::hidecursor();
+    rlutil::setBackgroundColor(rlutil::BLUE);
+    rlutil::anykey();
 
-    IDManager id_man;
-
-    Mapa2D mapa(Vector2(10,12), Vector2(75,50));
-
-    Personaje2D jugador(id_man, 'O', Vector2(25,25));
+    Mapa2D mapa(120, 30, Vector2(70, 30));
+    jugador.set_pos(mapa.get_pos());
     mapa.add_object(jugador);
-
-    for (int i = 0; i < 10; i++)
-    {
-        mapa.add_object(Caja2D(id_man, Vector2(23+i+i, 15+i*i)));
-    }
 
     while (true)
     {
-        mapa.draw_objects();
         jugador.moverse();
-        mapa.keep_objects_inside();
+        mapa.process();
     }
 
     return 0;
