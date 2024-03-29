@@ -4,7 +4,7 @@
 class Vector2
 {
 public:
-    double x;
+    double x; // Double es casi lo mismo que un float, solo que tiene mas posiciones de decimales y por lo tanto mas precision
     double y;
 
     Vector2(double init_x = 0, double init_y = 0)
@@ -20,7 +20,7 @@ public:
 
     void normalize() // Para que normalice esta instancia de Vector2
     {
-        double mag = sqrt(x * x + y * y);
+        double mag = sqrt(x * x + y * y); // sqrt es para obtener la raiz cuadrada de un numero, usa la biblioteca cmath
 
         if (mag != 0)
         {
@@ -45,7 +45,7 @@ public:
 
     double distance_to(const Vector2& vec)
     {
-        return sqrt(pow(vec.x - x, 2) + pow(vec.y - y, 2));
+        return sqrt(pow(vec.x - x, 2) + pow(vec.y - y, 2)); // pow es para obtener la potencia de un numero. Primero recibe el numero y despues la potencia
     }
 
     /// Sobrecargas
