@@ -24,6 +24,6 @@ int main()
 
     }
 
-    cout<< "NUMERO MAXIMO" << max_num << endl << pos << endl;
+    cout<< "NUMERO MAXIMO" << max_num << endl << pos +1 << endl;
     return 0;
 }
