@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-    int n1, max_num;
+    int n1, max_num, pos;
     for (int i=0; i < 10; i++)
     {
         cout << "escribir un numero" << endl;
@@ -17,12 +17,13 @@ int main()
         if (i==0)
         {
             max_num = n1;
+            pos = i;
 
         }
         else if(n1 > max_num) max_num = n1;
 
     }
 
-    cout<< "NUMERO MAXIMO" << max_num << endl;
+    cout<< "NUMERO MAXIMO" << max_num << endl << pos << endl;
     return 0;
 }
