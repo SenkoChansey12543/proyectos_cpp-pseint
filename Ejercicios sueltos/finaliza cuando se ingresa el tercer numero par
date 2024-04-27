@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+///hacer un programa donde se ingresa una lista de numeros enteros que finaliza cuando se ingresa el tercer numero par
+int main()
+{
+ int cuentapar = 0;
+ int sumapar = 0;
+ int num;
+ float promedio;
+ while( cuentapar != 3 )
+ {
+        cout << " ingrese numero: " << endl;
+        cin >> num;
+
+    if ( num % 2 == 0)
+        {
+        cuentapar ++;
+        sumapar += num;
+        }
+
+ }
+  promedio = (float)sumapar/cuentapar; /// promedio = sumapar / 3.0;
+  cout << " promedio par : " << promedio << endl;
+    return 0;
+}
