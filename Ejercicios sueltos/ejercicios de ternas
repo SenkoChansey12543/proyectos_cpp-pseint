@@ -1,0 +1,48 @@
+#include <iostream>
+
+using namespace std;
+/*hacer un programa que permita ingresar una lista de numeros positivos, negativos o cero
+hasta que se ingrese el 5numero par.
+
+CALCULAR E INFORMAR :
+la cantidad de ternas de numero negativos ingresado de manera consecutiva.
+las ternas son cada tres numeros por ejemplo : -1 -4 -5
+
+4 -1 -4 -5 10 -3 -5 7 -5 -3 -6 10  == 2 ternas
+4 -1 -4 -5 -10 -3 -5 7 -5 -3 -6 10  == 5 ternas
+*/
+int main()
+{ ///contar los numeros par, primer paso
+    int cuentapar = 0;
+    int contnegativo = 0;
+    int contador_ternas = 0;
+    int num;
+    do{
+        cout << "ingrese#: ";
+        cin>> num;
+        ///evaluo par y cuento
+
+        if (  num % 2 == 0)
+        {
+            cuentapar++;
+        }
+        /// cuenta negativos
+        if( num < 0)
+        {
+            contnegativo++;
+
+            if ( contnegativo == 3)
+            {
+                contador_ternas++;
+                contnegativo--;
+            }
+        }
+        else
+        {
+          contnegativo = 0 ;
+        }
+
+    }while(cuentapar < 5 );
+        cout << " contador de ternas " << contador_ternas  << endl;
+    return 0;
+}
