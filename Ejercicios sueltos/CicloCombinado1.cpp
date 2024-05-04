@@ -2,8 +2,6 @@
 
 using namespace std;
 
-#include "Clase.h"
-
 int main()
 {
     int total_pasajes = 0;
