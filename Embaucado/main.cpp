@@ -7,14 +7,14 @@ using namespace std;
 #include "funciones.h"
 #include "cartas.h"
 
-
 int main()
 {
     establecer_semilla();
 
     int puntos = 0;
     int embaucado = obtener_palo_carta();
-    cout << embaucado << endl << endl;
+    mostrar_palo(embaucado);
+    cout << endl << endl;
 
     for (int i = 0; i < 5; i ++)
     {
@@ -23,11 +23,12 @@ int main()
 
        if(embaucado != palo )
        {
-        puntos += num_carta;
+           puntos += num_carta;
        }
 
         cout << num_carta << endl;
-        cout << palo << endl << endl;
+        mostrar_palo(palo);
+        cout << endl << endl;
     }
     cout << puntos;
 
