@@ -47,6 +47,19 @@ int obtener_palo_carta()
     return num_aleatorio(0,3);
 }
 
-
+void mostrar_palo(int palo)
+{
+    switch (palo)
+    {
+        case 0: cout << "Corazon";
+        break;
+        case 1: cout << "Diamante";
+        break;
+        case 2: cout << "Pica";
+        break;
+        case 3: cout << "Trebol";
+        break;
+    }
+}
 
 #endif // CARTAS_H_INCLUDED
